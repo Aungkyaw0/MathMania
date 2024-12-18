@@ -9,8 +9,6 @@ import android.widget.TextView;
 import android.graphics.Color;
 import android.view.View;
 public class Level0 extends AppCompatActivity implements View.OnClickListener{
-
-
     TextView totalQuestionTV;
     TextView questionTV;
     Button ansA, ansB, ansC, ansD;
@@ -20,10 +18,8 @@ public class Level0 extends AppCompatActivity implements View.OnClickListener{
     int totalQuestion = QuestionAnswer.question.length;
     int currentQuestionIndex = 0;
     String selectedAnswer = "";
-
     MediaPlayer correctMusic;
     MediaPlayer wrongMusic;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,17 +40,13 @@ public class Level0 extends AppCompatActivity implements View.OnClickListener{
         submitBtn.setOnClickListener(this);
         nextBtn.setOnClickListener(this);
         loadNewQuestion();
-
     }
-
     public void loadNewQuestion(){
-
         if(currentQuestionIndex == totalQuestion){
             finishQuiz();
             return;
         }
         totalQuestionTV.setText("Question "+ (currentQuestionIndex + 1) +"/10");
-
         questionTV.setText(QuestionAnswer.question[currentQuestionIndex]);
         ansA.setText(QuestionAnswer.choices[currentQuestionIndex][0]);
         ansB.setText(QuestionAnswer.choices[currentQuestionIndex][1]);
@@ -75,8 +67,6 @@ public class Level0 extends AppCompatActivity implements View.OnClickListener{
         startActivity(i);
         finish();
     }
-
-
     @Override
     public void onClick(View v) {
         Button clickButton = (Button) v;
@@ -85,7 +75,6 @@ public class Level0 extends AppCompatActivity implements View.OnClickListener{
         ansC.setBackgroundColor(Color.parseColor("#5918db"));
         ansD.setBackgroundColor(Color.parseColor("#5918db"));
         nextBtn.setEnabled(false);
-
         if (clickButton.getId() == R.id.submit_btn) {
             // User has clicked the submit button
             ansA.setEnabled(false); // Disable answer buttons
@@ -100,6 +89,9 @@ public class Level0 extends AppCompatActivity implements View.OnClickListener{
                 correctMusic = MediaPlayer.create(this, R.raw.success);
                 correctMusic.start();
             } else {
+                selectBtn.setBackgroundColor(Color.RED);
+                wrongMusic = MediaPlayer.create(this, R.raw.wrong);
+                wrongMusic.start();
                 if (ansA.getText().toString().equals(QuestionAnswer.correctAnswer[currentQuestionIndex])){
                     ansA.setBackgroundColor(Color.GREEN);
                 }else if (ansB.getText().toString().equals(QuestionAnswer.correctAnswer[currentQuestionIndex])){
@@ -109,9 +101,6 @@ public class Level0 extends AppCompatActivity implements View.OnClickListener{
                 }else if (ansD.getText().toString().equals(QuestionAnswer.correctAnswer[currentQuestionIndex])){
                     ansD.setBackgroundColor(Color.GREEN);
                 }
-                selectBtn.setBackgroundColor(Color.RED);
-                wrongMusic = MediaPlayer.create(this, R.raw.wrong);
-                wrongMusic.start();
             }
         } else if (clickButton.getId() == R.id.next_btn) {
             // User is moving to the next question
@@ -126,7 +115,6 @@ public class Level0 extends AppCompatActivity implements View.OnClickListener{
                 ansC.setEnabled(true);
                 ansD.setEnabled(true);
                 submitBtn.setEnabled(true); // Re-enable submit button
-
         } else {
             // Choices button
             selectedAnswer = clickButton.getText().toString();
@@ -134,10 +122,8 @@ public class Level0 extends AppCompatActivity implements View.OnClickListener{
             clickButton.setBackgroundColor(Color.CYAN);
         }
     }
-
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
     }
-
 }

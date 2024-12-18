@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/back"
     tools:context=".Level1">
-
     <TextView
         android:id="@+id/total_question"
         android:layout_width="wrap_content"
@@ -23,7 +22,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText,TextContrastCheck" />
-
     <TextView
         android:id="@+id/question"
         android:layout_width="337dp"
@@ -38,7 +36,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         tools:ignore="HardcodedText" />
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/choices"
@@ -64,7 +61,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText" />
-
         <Button
             android:id="@+id/ans_B"
             style="@style/Widget.MaterialComponents.Button"
@@ -106,7 +102,6 @@
             android:backgroundTint="#5918db"
             android:text="Ans D"
             android:textColor="@color/white"
-
             android:textColorHighlight="@color/white"
             android:textColorLink="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -116,7 +111,6 @@
             app:layout_constraintTop_toBottomOf="@+id/ans_B"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="HardcodedText" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -136,7 +130,6 @@
         app:layout_constraintTop_toBottomOf="@+id/choices"
         app:layout_constraintVertical_bias="0.026"
         tools:ignore="HardcodedText" />
-
     <Button
         android:id="@+id/next_btn"
         style="@style/Widget.MaterialComponents.Button"
@@ -165,7 +158,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <TextView
             android:id="@+id/questionTxt"
             style="@style/Widget.AppCompat.TextView.SpinnerItem"
@@ -182,7 +174,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <TextView
         android:id="@+id/timerLvl2TV"
         android:layout_width="wrap_content"
@@ -196,5 +187,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/total_question"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

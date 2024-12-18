@@ -9,7 +9,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="236dp"
@@ -19,7 +18,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/bunny_avatar" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/level1"
             android:layout_width="330dp"
@@ -30,10 +28,7 @@
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             tools:ignore="ExtraText">
-
-
             <Button
                 android:id="@+id/lvl0Btn"
                 style="@style/Widget.MaterialComponents.Button"
@@ -46,7 +41,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.163"
                 app:layout_constraintStart_toStartOf="parent" />
-
             <TextView
                 android:id="@+id/lvl0Title"
                 android:layout_width="wrap_content"
@@ -101,7 +95,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ExtraText">
-
 
             <Button
                 android:id="@+id/lvl1Btn"
@@ -171,7 +164,6 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ExtraText">
 
-
             <Button
                 android:id="@+id/lvl2Btn"
                 style="@style/Widget.MaterialComponents.Button"
@@ -225,7 +217,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.242"
                 app:layout_constraintStart_toStartOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView

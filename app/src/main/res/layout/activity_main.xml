@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@mipmap/back"
     tools:context=".MainActivity">
-
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchCompat"
         android:layout_width="wrap_content"
@@ -17,15 +16,12 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:thumb="@drawable/switch_thumb"
-
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:showText="true"
         app:track="@drawable/switch_track" />
-
     <TextView
         android:id="@+id/gameTitle"
         android:layout_width="wrap_content"
@@ -41,7 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.124" />
-
     <Button
         android:id="@+id/startBtn"
         style="@style/Widget.MaterialComponents.Button"
@@ -55,7 +50,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.743"
         app:strokeColor="#B18A8A" />
-
     <Button
         android:id="@+id/exitBtn"
         style="@style/Widget.MaterialComponents.Button"
@@ -69,7 +63,6 @@
         app:layout_constraintTop_toBottomOf="@+id/startBtn"
         app:layout_constraintVertical_bias="0.223"
         app:strokeColor="#B18A8A" />
-
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="405dp"
@@ -79,7 +72,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gameTitle"
         app:srcCompat="@mipmap/mathmaia" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="55dp"
@@ -91,6 +83,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
