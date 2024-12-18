@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Math Mania</string>
+    <string name="quiz_txt">Enter Your Username</string>
+    <string name="play_txt">Play Now</string>
+    <string name="game_title">Math Mania For Kids</string>
+    <string name="lvl1_desc">- 20 sec for each question</string>
+    <string name="lvl2_desc">- 10 sec for each question</string>
+</resources>
